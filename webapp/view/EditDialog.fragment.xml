@@ -1,0 +1,111 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+   <Dialog title="Editar">
+      <beginButton>
+         <Button text="Aceptar" press="onConfirmUpdate" type="Emphasized"/>
+      </beginButton>
+   <endButton>
+       <Button xmlns="sap.m" text="Cerrar" id="button1" press="onCloseDialog"/>
+   </endButton>
+   <content>
+       <sap.ui.layout.form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="form0b">
+           <sap.ui.layout.form:content>
+               <core:Title text="{viewModel>/selectedItem/Maktx}" id="title0"/>
+               <Label text="Cantidad" id="label0"/>
+               <Input 	type="Number" value="{path:'viewModel>/selectedItem/Bdmng',type: 'sap.ui.model.type.Integer'}" width="100%" id="input0"/>
+               <Label text="Unidad" id="label1b"/>
+               <Select  
+               
+               	forceSelection="false"
+					selectedKey="{viewModel>/selectedItem/Meins}"
+					items="{
+						path: 'viewModel>/catalogo_um'
+						 
+					}"
+                width="100%" id="input2">
+               	<core:Item key="{viewModel>Meinh}" text="{viewModel>Meinh}" />
+                   	</Select>
+
+
+                                 <!--CENTRO-->
+                       <Label text="Centro"  />
+
+                <ComboBox  
+                id="WerksInputEdit"
+               					selectedKey="{viewModel>/selectedItem/Werks}"
+                                   
+	showSecondaryValues= "true"
+               	 change="onSelectCentro"
+					 
+					items="{
+						path: 'viewModel>/catalogo_centros'
+						 
+					}"
+                width="100%"  >
+                    <core:ListItem key="{viewModel>Werks}" text="{viewModel>NameCentro}" additionalText = "{viewModel>Werks}"/>
+                   	</ComboBox>
+
+                       <!--ALMACEN-->
+
+                       <Label text="Almacen" />
+
+                <ComboBox  
+               
+               	showSecondaryValues= "true"
+               	 
+                    id="almacenInputEdit"
+                                   					selectedKey="{viewModel>/selectedItem/Lgort}"
+
+					 change="onSelectAmacen"
+					items="{
+						path: 'viewModel>/catalogo_almacenes'
+						 
+					}"
+                width="100%"  >
+                    <core:ListItem key="{viewModel>Lgort}" text="{viewModel>Lgobe}" additionalText = "{viewModel>Lgort}"/>
+                   	</ComboBox>
+               
+
+<!-- EDit clase de valoracion-->
+  <Label text="Clase de Valoración"/>
+               <Select  
+               
+               	forceSelection="false"
+					selectedKey="{viewModel>/selectedItem/Charg}"
+					items="{
+						path: 'viewModel>/catalogo_charg'
+						 
+					}"
+                width="100%"  >
+               	<core:Item key="{viewModel>Charg}" text="{viewModel>Charg}" />
+                   	</Select>
+
+
+
+<!--edit serial num -->
+<Label visible="{= ${viewModel>/selectedItem/Sernr} !== ''}" text="Numero Serie (max: {viewModel>/selectedItem/Bdmng})" id="label012"/>
+               <MultiInput visible="{= ${viewModel>/selectedItem/Sernr} !== ''}"  
+               showValueHelp="false" 
+             suggestionItems="{
+										path: 'viewModel>/catalogo_seriales'	 
+			}" 
+            width="100%" 
+            	maxTokens="{viewModel>/selectedItem/Bdmng}"
+             id="input012">
+               			<core:Item key="{viewModel>Sernr}" text="{viewModel>Sernr}" />
+        
+
+               </MultiInput>
+
+
+
+		 
+               </sap.ui.layout.form:content>
+
+
+
+
+
+       </sap.ui.layout.form:SimpleForm>
+   </content>
+   </Dialog>
+</core:FragmentDefinition>

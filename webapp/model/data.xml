@@ -1,0 +1,257 @@
+<feed xmlns="http://www.w3.org/2005/Atom"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xml:base="http://saps4mdev.dc.mc.local:8000/sap/opu/odata/sap/ZPM_RESERVAS_SRV/">
+    <id>
+http://saps4mdev.dc.mc.local:8000/sap/opu/odata/sap/ZPM_RESERVAS_SRV/reservas_listSet</id>
+    <title type="text">
+reservas_listSet</title>
+    <updated>
+2021-12-12T05:38:01Z</updated>
+    <author>
+        <name/>
+    </author>
+    <link href="reservas_listSet" rel="self" title="reservas_listSet"/>
+    <entry>
+        <id> http://saps4mdev.dc.mc.local:8000/sap/opu/odata/sap/ZPM_RESERVAS_SRV/reservas_listSet(Rsnum='0000000136',Rspos='0001',Aufnr='4000078')</id>
+        <title type="text"> reservas_listSet(Rsnum='0000000136',Rspos='0001',Aufnr='4000078')</title>
+        <updated>
+2021-12-12T05:38:01Z</updated>
+        <category term="ZPM_RESERVAS_SRV.reservas_list" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+        <link href="reservas_listSet(Rsnum='0000000136',Rspos='0001',Aufnr='4000078')" rel="self" title="reservas_list"/>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Rsnum>
+0000000136</d:Rsnum>
+                <d:Rspos>
+0001</d:Rspos>
+                <d:Rsart></d:Rsart>
+                <d:Bdart>
+AR</d:Bdart>
+                <d:Rssta></d:Rssta>
+                <d:Xloek>
+true</d:Xloek>
+                <d:Xwaok>
+true</d:Xwaok>
+                <d:Kzear>
+false</d:Kzear>
+                <d:Matnr>
+10</d:Matnr>
+                <d:Werks>
+1000</d:Werks>
+                <d:Lgort></d:Lgort>
+                <d:Prvbe></d:Prvbe>
+                <d:Charg></d:Charg>
+                <d:Plpla></d:Plpla>
+                <d:Sobkz></d:Sobkz>
+                <d:Bdter>
+2021-05-31T00:00:00</d:Bdter>
+                <d:Bdmng>
+1</d:Bdmng>
+                <d:Meins>
+PI</d:Meins>
+                <d:Shkzg>
+H</d:Shkzg>
+                <d:Fmeng>
+false</d:Fmeng>
+                <d:Enmng>
+0</d:Enmng>
+                <d:Enwrt>
+0</d:Enwrt>
+                <d:Waers>
+COP</d:Waers>
+                <d:Erfmg>
+1</d:Erfmg>
+                <d:Erfme>
+PI</d:Erfme>
+                <d:Plnum></d:Plnum>
+                <d:Banfn></d:Banfn>
+                <d:Bnfpo>
+00000</d:Bnfpo>
+                <d:Aufnr>
+4000078</d:Aufnr>
+                <d:Sernr></d:Sernr>
+                <d:Bwart>
+281</d:Bwart>
+                <d:Ebeln></d:Ebeln>
+                <d:Ebelp>
+00000</d:Ebelp>
+                <d:Vornr>
+0010</d:Vornr>
+                <d:Maktx>
+ROUTER BDCOM BSR 2800-40 AC 24 VOLT</d:Maktx>
+                <d:NameCentro>
+Centro Pereira</d:NameCentro>
+                <d:Lgobe></d:Lgobe>
+                <d:Zcreate>
+false</d:Zcreate>
+                <d:Zdelete>
+false</d:Zdelete>
+                <d:Zupdate>
+false</d:Zupdate>
+            </m:properties>
+        </content>
+    </entry>
+    <entry>
+        <id> http://saps4mdev.dc.mc.local:8000/sap/opu/odata/sap/ZPM_RESERVAS_SRV/reservas_listSet(Rsnum='0000000136',Rspos='0002',Aufnr='4000078')</id>
+        <title type="text"> reservas_listSet(Rsnum='0000000136',Rspos='0002',Aufnr='4000078')</title>
+        <updated>
+2021-12-12T05:38:01Z</updated>
+        <category term="ZPM_RESERVAS_SRV.reservas_list" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+        <link href="reservas_listSet(Rsnum='0000000136',Rspos='0002',Aufnr='4000078')" rel="self" title="reservas_list"/>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Rsnum>
+0000000136</d:Rsnum>
+                <d:Rspos>
+0002</d:Rspos>
+                <d:Rsart></d:Rsart>
+                <d:Bdart>
+AR</d:Bdart>
+                <d:Rssta></d:Rssta>
+                <d:Xloek>
+true</d:Xloek>
+                <d:Xwaok>
+true</d:Xwaok>
+                <d:Kzear>
+true</d:Kzear>
+                <d:Matnr>
+30</d:Matnr>
+                <d:Werks>
+1000</d:Werks>
+                <d:Lgort></d:Lgort>
+                <d:Prvbe></d:Prvbe>
+                <d:Charg></d:Charg>
+                <d:Plpla></d:Plpla>
+                <d:Sobkz></d:Sobkz>
+                <d:Bdter>
+2021-05-31T00:00:00</d:Bdter>
+                <d:Bdmng>
+25</d:Bdmng>
+                <d:Meins>
+C/U</d:Meins>
+                <d:Shkzg>
+H</d:Shkzg>
+                <d:Fmeng>
+false</d:Fmeng>
+                <d:Enmng>
+25</d:Enmng>
+                <d:Enwrt>
+500</d:Enwrt>
+                <d:Waers>
+COP</d:Waers>
+                <d:Erfmg>
+25</d:Erfmg>
+                <d:Erfme>
+C/U</d:Erfme>
+                <d:Plnum></d:Plnum>
+                <d:Banfn></d:Banfn>
+                <d:Bnfpo>
+00000</d:Bnfpo>
+                <d:Aufnr>
+4000078</d:Aufnr>
+                <d:Sernr></d:Sernr>
+                <d:Bwart>
+281</d:Bwart>
+                <d:Ebeln></d:Ebeln>
+                <d:Ebelp>
+00000</d:Ebelp>
+                <d:Vornr>
+0010</d:Vornr>
+                <d:Maktx>
+Hebillas 2x3</d:Maktx>
+                <d:NameCentro>
+Centro Pereira</d:NameCentro>
+                <d:Lgobe></d:Lgobe>
+                <d:Zcreate>
+false</d:Zcreate>
+                <d:Zdelete>
+false</d:Zdelete>
+                <d:Zupdate>
+false</d:Zupdate>
+            </m:properties>
+        </content>
+    </entry>
+    <entry>
+        <id> http://saps4mdev.dc.mc.local:8000/sap/opu/odata/sap/ZPM_RESERVAS_SRV/reservas_listSet(Rsnum='0000000136',Rspos='0003',Aufnr='4000078')</id>
+        <title type="text"> reservas_listSet(Rsnum='0000000136',Rspos='0003',Aufnr='4000078')</title>
+        <updated>
+2021-12-12T05:38:01Z</updated>
+        <category term="ZPM_RESERVAS_SRV.reservas_list" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+        <link href="reservas_listSet(Rsnum='0000000136',Rspos='0003',Aufnr='4000078')" rel="self" title="reservas_list"/>
+        <content type="application/xml">
+            <m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+                xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+                <d:Rsnum>
+0000000136</d:Rsnum>
+                <d:Rspos>
+0003</d:Rspos>
+                <d:Rsart></d:Rsart>
+                <d:Bdart>
+AR</d:Bdart>
+                <d:Rssta></d:Rssta>
+                <d:Xloek>
+true</d:Xloek>
+                <d:Xwaok>
+true</d:Xwaok>
+                <d:Kzear>
+true</d:Kzear>
+                <d:Matnr>
+25</d:Matnr>
+                <d:Werks>
+1000</d:Werks>
+                <d:Lgort></d:Lgort>
+                <d:Prvbe></d:Prvbe>
+                <d:Charg></d:Charg>
+                <d:Plpla></d:Plpla>
+                <d:Sobkz></d:Sobkz>
+                <d:Bdter>
+2021-05-31T00:00:00</d:Bdter>
+                <d:Bdmng>
+3</d:Bdmng>
+                <d:Meins>
+C/U</d:Meins>
+                <d:Shkzg>
+H</d:Shkzg>
+                <d:Fmeng>
+false</d:Fmeng>
+                <d:Enmng>
+3</d:Enmng>
+                <d:Enwrt>
+306</d:Enwrt>
+                <d:Waers>
+COP</d:Waers>
+                <d:Erfmg>
+3</d:Erfmg>
+                <d:Erfme>
+C/U</d:Erfme>
+                <d:Plnum></d:Plnum>
+                <d:Banfn></d:Banfn>
+                <d:Bnfpo>
+00000</d:Bnfpo>
+                <d:Aufnr>
+4000078</d:Aufnr>
+                <d:Sernr></d:Sernr>
+                <d:Bwart>
+281</d:Bwart>
+                <d:Ebeln></d:Ebeln>
+                <d:Ebelp>
+00000</d:Ebelp>
+                <d:Vornr>
+0010</d:Vornr>
+                <d:Maktx>
+POSTE EN FIBRA DE VIDRIO 18 M POR 750 KG</d:Maktx>
+                <d:NameCentro>
+Centro Pereira</d:NameCentro>
+                <d:Lgobe></d:Lgobe>
+                <d:Zcreate>
+false</d:Zcreate>
+                <d:Zdelete>
+false</d:Zdelete>
+                <d:Zupdate>
+false</d:Zupdate>
+            </m:properties>
+        </content>
+    </entry>
+</feed>

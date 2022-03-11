@@ -1,0 +1,249 @@
+<mvc:View controllerName="mc.consumomateriales.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" height="100%"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:layout="sap.ui.layout">
+    <f:DynamicPage id="_IDGenDynamicPage1" showFooter="true">
+        <!-- DynamicPage Title -->
+        <f:title></f:title>
+
+        <!-- DynamicPage Header -->
+        <f:header>
+            <f:DynamicPageHeader id="_IDGenDynamicPageHeader1">
+
+                <f:content>
+                    <fb:FilterBar search="onSearch" showFilterConfiguration="false" useToolbar="false" showGoOnFB="true" id="_IDGenFilterBar1">
+                        <fb:filterGroupItems>
+
+                            <fb:FilterGroupItem name="Salida Mercancias" label="Salida Mercancias" groupName="__$INTERNAL$" id="_IDGenFilterGroupItem1" visibleInFilterBar="true">
+                                <fb:control>
+                                    <Select id="_IDGenComboBox1">
+
+                                        <items>
+                                            <core:Item id="_IDGenItem1" key="A07" text="A07 Salida de mercancia"/>
+                                        </items>
+                                    </Select>
+                                </fb:control>
+
+                            </fb:FilterGroupItem>
+                            <fb:FilterGroupItem name="Reserva" label="Filtro" groupName="__$INTERNAL$" id="_IDGenFilterGroupItem2" visibleInFilterBar="true">
+                                <fb:control>
+                                    <Select id="_FilterType">
+
+                                        <items>
+                                            <core:Item id="_IDGenItem2" key="Rsnum" text="R09 Reserva"/>
+                                            <core:Item id="_IDGenItem3" key="Aufnr" text="R08 Orden"/>
+                                        </items>
+                                    </Select>
+                                </fb:control>
+                            </fb:FilterGroupItem>
+                            <fb:FilterGroupItem label="Número" name="Numero" groupName="__$INTERNAL$" id="_IDGenFilterGroupItem3" visibleInFilterBar="true" mandatory="true">
+                                <fb:control>
+                                    <Input id="_IDGenInput1"></Input>
+                                </fb:control>
+
+                            </fb:FilterGroupItem>
+
+                        </fb:filterGroupItems>
+                    </fb:FilterBar>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <!-- DynamicPage Content -->
+
+
+        <f:content>
+
+        <!-- colocar en la tabla   indicadores de color para saber si hay uno nuevo o se edito el item , el rojo no se nota solo se quita de la tabla -->
+            <Table 
+            id="_IDGenTable1" 
+            mode="Delete" 
+            delete="onDeletePosition"
+           	items="{
+			path: 'viewModel>/materiales'
+			 
+		}"
+            
+            >
+
+
+<!---HEADER TOOLBAR-->
+
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Materiales" level="H2"/>
+					<ToolbarSpacer />
+					 
+					 
+					<Button id="toggleInfoToolbar"
+						text="Agregar Material"
+                        type="Emphasized"
+						press="onAddPosition" />
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+
+
+
+
+                <columns>
+
+                    <Column demandPopin="true" 	minScreenWidth="Desktop"   >
+                        <Text text="Linea"></Text>
+
+                    </Column>
+
+                        <Column  	 
+				demandPopin="true" minScreenWidth="Desktop" >
+                        <Text text="Material"></Text>
+
+                    </Column>
+
+                    <Column id="_IDGenColumn1" 	width="12em">
+                        <Text id="_IDGenText1" text="Txt. breve mat"></Text>
+
+                    </Column>
+
+                    <Column  	 
+				demandPopin="true" minScreenWidth="Desktop" >
+                        <Text text="OK"></Text>
+
+                    </Column>
+
+
+                    <Column  	 
+				demandPopin="true" 	width="8em" minScreenWidth="Desktop" >
+                        <Text text="Tiene Oserial"></Text>
+
+                    </Column>
+
+
+                    <Column  demandPopin="true" minScreenWidth="Desktop"  id="_IDGenColumn2">
+                        <Text id="_IDGenText2" text="Ctd. en UME"></Text>
+
+                    </Column>
+
+                    <Column demandPopin="true" minScreenWidth="Desktop"  id="_IDGenColumn3">
+                        <Text id="_IDGenText3" text="UME"></Text>
+
+                    </Column>
+
+                    <Column demandPopin="true" minScreenWidth="Desktop"   id="_IDGenColumn4">
+                        <Text id="_IDGenText4" text="Almacén"></Text>
+
+                    </Column>
+
+                    <Column demandPopin="true" minScreenWidth="Desktop"  id="_IDGenColumn5">
+                        <Text id="_IDGenText5" text="Orden"></Text>
+
+                    </Column>
+                    <Column demandPopin="true" minScreenWidth="Desktop"  id="_IDGenColumn6">
+                        <Text id="_IDGenText6" text="Operacion"></Text>
+
+                    </Column>
+
+                        <Column demandPopin="true" minScreenWidth="Desktop"   >
+                        <Text  text="Sociedad"></Text>
+
+                    </Column>
+
+                    <Column demandPopin="true" 	minScreenWidth="Desktop"  id="_IDGenColumn7">
+                        <Text id="_IDGenText7" text="CL. Valoración"></Text>
+
+                    </Column>
+
+                    <Column demandPopin="true" 	minScreenWidth="Desktop"  id="_IDGenColumn8">
+                        <Text id="_IDGenText8" text="Cl. movimento"></Text>
+
+                    </Column>
+
+                    <Column demandPopin="true" 	minScreenWidth="Desktop"  id="_IDGenColumn9">
+                        <Text id="_IDGenText9" text="Tipo de stocks"></Text>
+
+                    </Column>
+
+                    <Column demandPopin="true"  	minScreenWidth="Desktop" id="_IDGenColumn10">
+                        <Text id="_IDGenText10" text="Ce."></Text>
+
+                    </Column>
+
+
+
+
+
+
+
+
+
+                </columns>
+
+                <items>
+
+<!--ITEMS-->
+
+	<ColumnListItem
+				type="Detail"
+				vAlign="Middle"
+				detailPress="onEditPosition" 
+				>
+				<cells>
+					<ObjectIdentifier title="{viewModel>Rspos}"   />
+                    <Text text="{viewModel>Matnr}" />
+                    <ObjectIdentifier text="{viewModel>Maktx}"   />
+                   
+ 					<CheckBox enabled="false" />
+                      <!--serial-->
+                    <layout:VerticalLayout>
+                              <ObjectStatus  
+                              visible="{= ${viewModel>Sernr} !== ''  }" 
+ 			text="Requiere serial"
+			state="Warning" />
+  		 
+                    </layout:VerticalLayout>
+					<Text text="{viewModel>Bdmng}" />
+                    <Text text="{viewModel>Meins}" />
+           
+                                      	<ObjectIdentifier title="{viewModel>Lgobe}" text="{viewModel>Lgort}" />
+
+              
+                        <Text text="{viewModel>Aufnr}" />
+                          <Text text=" " />
+                      <Text text="{viewModel>Werks}" />
+                     <Text text="{viewModel>Charg}" />
+                     <Text text="{viewModel>Bwart}" />
+                     <Text text=" " />
+                      	<ObjectIdentifier title="{viewModel>NameCentro}" text="{viewModel>Werks}" />
+
+
+
+
+                      
+				</cells>
+			</ColumnListItem>
+
+
+                </items>
+
+
+
+            </Table>
+
+
+        </f:content>
+        <!-- DynamicPage Footer -->
+        <f:footer>
+            <OverflowToolbar   id="_IDGenOverflowToolbar1">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                <Button type="Default" press="onReset" text="Cancelar"/>
+
+                <Button type="Emphasized" press="onPress" text="Guardar"/>
+
+            </OverflowToolbar>
+        </f:footer>
+
+    </f:DynamicPage>
+</mvc:View>

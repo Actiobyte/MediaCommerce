@@ -1,0 +1,96 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+   <Dialog title="Agregar Material">
+      <beginButton>
+         <Button text="Aceptar" press="onConfirmMaterial" type="Emphasized"/>
+      </beginButton>
+   <endButton>
+       <Button xmlns="sap.m" text="Cerrar"   press="onCloseAddDialog"/>
+   </endButton>
+   <content>
+       <sap.ui.layout.form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="form0">
+           <sap.ui.layout.form:content>
+               <core:Title text=" "  />
+               <Label text="Material" />
+
+                <ComboBox  
+               						showSecondaryValues= "true"
+                                      					filterSecondaryValues= "true"
+ 
+
+               	 change="onSelectMaterial"
+					 
+					items="{
+						path: 'materialesModel>/'
+						 
+					}"
+                width="100%" id="materialesInput">
+                    <core:ListItem key="{materialesModel>Matnr}" text="{materialesModel>Maktx}" additionalText = "{materialesModel>Matnr}"/>
+                   	</ComboBox>
+               
+    
+
+
+
+               <Label text="Cantidad"  />
+               <Input id="BdmngInput"/>
+
+
+                <Label text="Unidad" id="label1"/>
+               <Select  
+               
+               
+               	forceSelection="false"
+					selectedKey="{viewModel>/selectedItem/Meins}"
+					items="{
+						path: 'viewModel>/catalogo_um'
+						 
+					}"
+                width="100%" id="MeinsInput">
+               	<core:Item key="{viewModel>Meinh}" text="{viewModel>Meinh}" />
+                   	</Select>
+
+                       <!--CENTRO-->
+                       <Label text="Centro"  />
+
+                <ComboBox  
+                id="WerksInput"
+               	showSecondaryValues= "true"
+               	 change="onSelectCentro"
+					 
+					items="{
+						path: 'viewModel>/catalogo_centros'
+						 
+					}"
+                width="100%"  >
+                    <core:ListItem key="{viewModel>Werks}" text="{viewModel>NameCentro}" additionalText = "{viewModel>Werks}"/>
+                   	</ComboBox>
+
+                       <!--ALMACEN-->
+
+                       <Label text="Almacen" />
+
+                <ComboBox  
+               
+               	 	showSecondaryValues= "true"
+                    id="almacenInput"
+					 
+					items="{
+						path: 'viewModel>/catalogo_almacenes'
+						 
+					}"
+                width="100%"  >
+                    <core:ListItem key="{viewModel>Lgort}" text="{viewModel>Lgobe}" additionalText = "{viewModel>Lgort}"/>
+                   	</ComboBox>
+               
+
+               <Label text="Tipo Movimiento"  />
+               <Input id="BwartInput"/>
+
+
+   
+		 
+               </sap.ui.layout.form:content>
+       </sap.ui.layout.form:SimpleForm>
+   </content>
+   </Dialog>
+</core:FragmentDefinition>
